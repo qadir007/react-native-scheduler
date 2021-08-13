@@ -1,7 +1,6 @@
 import React from "react";
 import { Text, View } from "react-native";
 
-// timeline
 export default function Timeline() {
   const timelineItems = [];
 
@@ -11,7 +10,6 @@ export default function Timeline() {
         key={index.toString()}
         style={{
           width: "100%",
-          // justifyContent: "space-between",
           height: 60,
           alignItems: "center",
           borderBottomWidth: 1,

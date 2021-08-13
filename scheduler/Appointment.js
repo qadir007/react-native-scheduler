@@ -2,9 +2,14 @@ import React, { useEffect } from "react";
 import { FlatList, Image, StyleSheet, Text, View } from "react-native";
 import AppointmentItem from "./AppointmentItem";
 
-export default function Appointment({ image, username, appointments }) {
-  const oldHeight = React.useRef(0);
+export default function Appointment({
+  oldHeight,
+  image,
+  username,
+  appointments,
+}) {
   useEffect(() => {
+    oldHeight.current = 0;
     return () => {
       oldHeight.current = 0;
     };

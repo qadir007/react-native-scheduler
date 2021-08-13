@@ -13,6 +13,7 @@ export default function AppointmentItem({
   const top = start - oldHeight.current;
   oldHeight.current = end;
   useEffect(() => {
+    oldHeight.current = 0;
     return () => {
       oldHeight.current = 0;
     };
