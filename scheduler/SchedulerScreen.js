@@ -18,12 +18,12 @@ const data = [
     appointments: [
       {
         id: 1,
-        start: 100, // meants 120 minutes = 02:00 = ((new Date().getHours()) * 60) + new Date().getMinutes(),
+        start: 80, // meants 120 minutes = 02:00 = ((new Date().getHours()) * 60) + new Date().getMinutes(),
         end: 200, // meants 180 minutes = 03:00 = ((new Date().getHours()) * 60) + new Date().getMinutes(),
         username: "Karim",
         image: require("./user.jpg"),
         message: "teach him react natie",
-        date: new Date().now(),
+        date: new Date(),
       },
       {
         id: 2,
@@ -32,7 +32,7 @@ const data = [
         username: "Kamal",
         image: require("./user.jpg"),
         message: "play game with him",
-        date: new Date().now(),
+        date: new Date(),
       },
     ],
   },
@@ -48,7 +48,7 @@ const data = [
         username: "Karim",
         image: require("./user.jpg"),
         message: "teach him react natie",
-        date: new Date().now(),
+        date: new Date(),
       },
       {
         id: 2,
@@ -57,6 +57,7 @@ const data = [
         username: "Kamal",
         image: require("./user.jpg"),
         message: "play game with him",
+        date: new Date(),
       },
       {
         id: 3,
@@ -65,7 +66,7 @@ const data = [
         username: "Kamal",
         image: require("./user.jpg"),
         message: "play game with him",
-        date: new Date().now(),
+        date: new Date(),
       },
     ],
   },
@@ -81,7 +82,7 @@ const data = [
         username: "Karim",
         image: require("./user.jpg"),
         message: "teach him react natie",
-        date: new Date().now(),
+        date: new Date(),
       },
       {
         id: 2,
@@ -90,7 +91,7 @@ const data = [
         username: "Kamal",
         image: require("./user.jpg"),
         message: "play game with him",
-        date: new Date().now(),
+        date: new Date(),
       },
       {
         id: 3,
@@ -99,7 +100,7 @@ const data = [
         username: "Kamal",
         image: require("./user.jpg"),
         message: "play game with him",
-        date: new Date().now(),
+        date: new Date(),
       },
     ],
   },
