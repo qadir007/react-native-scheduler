@@ -4,7 +4,7 @@ import { Text, View } from "react-native";
 export default function Timeline() {
   const timelineItems = [];
 
-  for (let index = 0; index < 48; index++) {
+  for (let index = 0; index < 24; index++) {
     timelineItems.push(
       <View
         key={index.toString()}
@@ -16,12 +16,19 @@ export default function Timeline() {
           borderBottomColor: "#eee",
         }}
       >
-        <Text style={{ height: 30, fontSize: 10 }}>
-          {index < 10 ? `0${index}:00` : `${index}:00`}
-        </Text>
-        <Text style={{ height: 30, fontSize: 10 }}>
-          {index < 10 ? `0${index}:30` : `${index}:30`}
-        </Text>
+        {index === 0 ? (
+          <Text style={{ height: 15, fontSize: 10 }}>
+            {index < 10 ? `0${index}:01` : `${index}:01`}
+          </Text>
+        ) : (
+          <Text style={{ height: 15, fontSize: 10 }}>
+            {index < 10 ? `0${index}:00` : `${index}:00`}
+          </Text>
+        )}
+
+        <Text style={{ height: 15, fontSize: 7 }}>15mins</Text>
+        <Text style={{ height: 15, fontSize: 7 }}>30mins</Text>
+        <Text style={{ height: 15, fontSize: 7 }}>45mins</Text>
       </View>
     );
   }
