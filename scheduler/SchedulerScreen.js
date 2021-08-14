@@ -10,7 +10,102 @@ import {
 import Appointment from "./Appointment";
 import Timeline from "./Timeline";
 
-const data = [
+const lastDayData = [
+  {
+    id: 1,
+    username: "Abdul Qadir",
+    image: require("./user.jpg"),
+    appointments: [
+      {
+        id: 1,
+        start: 80, // meants 120 minutes = 02:00 = ((new Date().getHours()) * 60) + new Date().getMinutes(),
+        end: 200, // meants 180 minutes = 03:00 = ((new Date().getHours()) * 60) + new Date().getMinutes(),
+        username: "John",
+        image: require("./user.jpg"),
+        message: "teach him react natie",
+        date: new Date(),
+      },
+      {
+        id: 2,
+        start: 220, // meants 240 minutes = 04:00 = ((new Date().getHours()) * 60) + new Date().getMinutes(),
+        end: 360, // meants 180 minutes = 06:00 = ((new Date().getHours()) * 60) + new Date().getMinutes(),
+        username: "Wais",
+        image: require("./user.jpg"),
+        message: "play game with him",
+        date: new Date(),
+      },
+    ],
+  },
+  {
+    id: 2,
+    username: "Sami",
+    image: require("./user.jpg"),
+    appointments: [
+      {
+        id: 1,
+        start: 100, // meants 120 minutes = 02:00 = ((new Date().getHours()) * 60) + new Date().getMinutes(),
+        end: 150, // meants 180 minutes = 03:00 = ((new Date().getHours()) * 60) + new Date().getMinutes(),
+        username: "Karim",
+        image: require("./user.jpg"),
+        message: "teach him react natie",
+        date: new Date(),
+      },
+      {
+        id: 2,
+        start: 240, // meants 240 minutes = 04:00 = ((new Date().getHours()) * 60) + new Date().getMinutes(),
+        end: 460, // meants 180 minutes = 06:00 = ((new Date().getHours()) * 60) + new Date().getMinutes(),
+        username: "Kamal",
+        image: require("./user.jpg"),
+        message: "play game with him",
+        date: new Date(),
+      },
+      {
+        id: 3,
+        start: 490, // meants 240 minutes = 04:00 = ((new Date().getHours()) * 60) + new Date().getMinutes(),
+        end: 560, // meants 180 minutes = 06:00 = ((new Date().getHours()) * 60) + new Date().getMinutes(),
+        username: "Kamal",
+        image: require("./user.jpg"),
+        message: "play game with him",
+        date: new Date(),
+      },
+    ],
+  },
+  {
+    id: 3,
+    username: "Smith",
+    image: require("./user.jpg"),
+    appointments: [
+      {
+        id: 1,
+        start: 100, // meants 120 minutes = 02:00 = ((new Date().getHours()) * 60) + new Date().getMinutes(),
+        end: 150, // meants 180 minutes = 03:00 = ((new Date().getHours()) * 60) + new Date().getMinutes(),
+        username: "Karim",
+        image: require("./user.jpg"),
+        message: "teach him react natie",
+        date: new Date(),
+      },
+      {
+        id: 2,
+        start: 240, // meants 240 minutes = 04:00 = ((new Date().getHours()) * 60) + new Date().getMinutes(),
+        end: 460, // meants 180 minutes = 06:00 = ((new Date().getHours()) * 60) + new Date().getMinutes(),
+        username: "Kamal",
+        image: require("./user.jpg"),
+        message: "play game with him",
+        date: new Date(),
+      },
+      {
+        id: 3,
+        start: 490, // meants 240 minutes = 04:00 = ((new Date().getHours()) * 60) + new Date().getMinutes(),
+        end: 560, // meants 180 minutes = 06:00 = ((new Date().getHours()) * 60) + new Date().getMinutes(),
+        username: "Kamal",
+        image: require("./user.jpg"),
+        message: "play game with him",
+        date: new Date(),
+      },
+    ],
+  },
+];
+const currentDay = [
   {
     id: 1,
     username: "Sami",
@@ -105,9 +200,63 @@ const data = [
     ],
   },
 ];
+const nextDayData = [
+  {
+    id: 1,
+    username: "Wow",
+    image: require("./user.jpg"),
+    appointments: [
+      {
+        id: 1,
+        start: 20, // meants 120 minutes = 02:00 = ((new Date().getHours()) * 60) + new Date().getMinutes(),
+        end: 80, // meants 180 minutes = 03:00 = ((new Date().getHours()) * 60) + new Date().getMinutes(),
+        username: "Karim khan",
+        image: require("./user.jpg"),
+        message: "teach him react natie",
+        date: new Date(),
+      },
+      {
+        id: 2,
+        start: 220, // meants 240 minutes = 04:00 = ((new Date().getHours()) * 60) + new Date().getMinutes(),
+        end: 360, // meants 180 minutes = 06:00 = ((new Date().getHours()) * 60) + new Date().getMinutes(),
+        username: "Mike",
+        image: require("./user.jpg"),
+        message: "play game with him",
+        date: new Date(),
+      },
+    ],
+  },
+  {
+    id: 2,
+    username: "Mike",
+    image: require("./user.jpg"),
+    appointments: [
+      {
+        id: 1,
+        start: 100, // meants 120 minutes = 02:00 = ((new Date().getHours()) * 60) + new Date().getMinutes(),
+        end: 150, // meants 180 minutes = 03:00 = ((new Date().getHours()) * 60) + new Date().getMinutes(),
+        username: "Karim",
+        image: require("./user.jpg"),
+        message: "teach him react natie",
+        date: new Date(),
+      },
+      {
+        id: 2,
+        start: 240, // meants 240 minutes = 04:00 = ((new Date().getHours()) * 60) + new Date().getMinutes(),
+        end: 360, // meants 180 minutes = 06:00 = ((new Date().getHours()) * 60) + new Date().getMinutes(),
+        username: "Kamal",
+        image: require("./user.jpg"),
+        message: "play game with him",
+        date: new Date(),
+      },
+    ],
+  },
+];
 
 export default function SchedulerScreen() {
   const date = new Date();
+  const [data, setData] = useState(currentDay);
+  console.log(data);
   const [top, setTop] = useState(
     date.getHours() * 60 + date.getMinutes() + 100
   );
@@ -165,7 +314,7 @@ export default function SchedulerScreen() {
       clearTimeout(timer);
       oldHeight.current = 0;
     };
-  }, [top, todayInNumber, dayOfTheMonth]);
+  }, [top, todayInNumber, dayOfTheMonth, data]);
 
   return (
     <View style={styles.container}>
@@ -180,6 +329,7 @@ export default function SchedulerScreen() {
           onPress={() => {
             setDayOfTheMonth((prevDay) => prevDay - 1);
             setTodayInNumber((prevDay) => (prevDay < 0 ? 5 : prevDay - 1));
+            setData(lastDayData);
           }}
           style={{
             padding: 10,
@@ -194,6 +344,7 @@ export default function SchedulerScreen() {
           onPress={() => {
             setDayOfTheMonth(date.getDate());
             setTodayInNumber(date.getDay());
+            setData(currentDay);
           }}
           style={{
             paddingVertical: 10,
@@ -209,6 +360,7 @@ export default function SchedulerScreen() {
           onPress={() => {
             setDayOfTheMonth((prevDay) => prevDay + 1);
             setTodayInNumber((prevDay) => (prevDay > 5 ? 0 : prevDay + 1));
+            setData(nextDayData);
           }}
           style={{
             padding: 10,
