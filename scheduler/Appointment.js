@@ -33,11 +33,11 @@ export default function Appointment({
             return (
               <AppointmentItem
                 key={item.id}
-                start={item.start}
-                end={item.end}
+                startTime={item.start}
+                endTime={item.end}
                 username={item.username}
                 image={item.image}
-                message={item.message}
+                title={item.title}
                 oldHeight={oldHeight}
               />
             );

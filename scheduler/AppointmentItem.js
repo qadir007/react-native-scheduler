@@ -2,13 +2,18 @@ import React, { useEffect } from "react";
 import { View, Text, Image } from "react-native";
 
 export default function AppointmentItem({
-  start,
-  end,
+  startTime,
+  endTime,
   username,
   image,
-  message,
+  title,
   oldHeight,
 }) {
+  const start =
+    new Date(startTime).getUTCHours() * 60 +
+    new Date(startTime).getUTCMinutes();
+  const end =
+    new Date(endTime).getUTCHours() * 60 + new Date(endTime).getUTCMinutes();
   const height = end - start;
   const top = start - oldHeight.current;
   oldHeight.current = end;
@@ -65,7 +70,7 @@ export default function AppointmentItem({
             </View>
           </View>
           <View>
-            <Text>{message}</Text>
+            <Text>{title}</Text>
           </View>
         </View>
       </View>
