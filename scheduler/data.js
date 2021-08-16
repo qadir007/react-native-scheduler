@@ -80,8 +80,7 @@ const data = [
 ];
 
 const getSelectedDateData = (date) => {
-  const newDate = date;
-  console.log(newDate.toISOString().split("T")[0]);
+  console.log(date.toISOString().split("T")[0]);
 
   const selectedDateDate = data.map((user) => {
     return {
@@ -89,7 +88,7 @@ const getSelectedDateData = (date) => {
       appointments: user.appointments.filter(
         (appointment) =>
           appointment.start.toISOString().split("T")[0] ===
-          newDate.toISOString().split("T")[0]
+          date.toISOString().split("T")[0]
       ),
     };
   });

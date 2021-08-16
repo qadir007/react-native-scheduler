@@ -28,7 +28,6 @@ export default function SchedulerScreen() {
 
   const oldHeight = React.useRef(0);
   const [selectedDate, setSelectedDate] = useState(date);
-  const [todayInNumber, setTodayInNumber] = useState(date.getDay());
   const [today, setToday] = useState(getDayOfDateInString(date));
   const [dayOfTheMonth, setDayOfTheMonth] = useState(date.getDate());
 
@@ -41,7 +40,7 @@ export default function SchedulerScreen() {
       clearTimeout(timer);
       oldHeight.current = 0;
     };
-  }, [top, todayInNumber, dayOfTheMonth, data, selectedDate]);
+  }, [top, dayOfTheMonth, data, selectedDate]);
 
   return (
     <View style={styles.container}>

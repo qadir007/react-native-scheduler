@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { FlatList, Image, StyleSheet, Text, View } from "react-native";
+import { FlatList, Image, Text, View } from "react-native";
 import AppointmentItem from "./AppointmentItem";
 
 export default function Appointment({

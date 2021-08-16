@@ -25,10 +25,15 @@ export default function Timeline() {
             {index < 10 ? `0${index}:00` : `${index}:00`}
           </Text>
         )}
-
-        <Text style={{ height: 15, fontSize: 7 }}>15mins</Text>
-        <Text style={{ height: 15, fontSize: 7 }}>30mins</Text>
-        <Text style={{ height: 15, fontSize: 7 }}>45mins</Text>
+        <Text style={{ height: 15, fontSize: 10 }}>
+          {index < 10 ? `0${index}:15` : `${index}:15`}
+        </Text>
+        <Text style={{ height: 15, fontSize: 10 }}>
+          {index < 10 ? `0${index}:30` : `${index}:30`}
+        </Text>
+        <Text style={{ height: 15, fontSize: 10 }}>
+          {index < 10 ? `0${index}:45` : `${index}:45`}
+        </Text>
       </View>
     );
   }
